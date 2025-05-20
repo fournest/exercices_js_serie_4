@@ -8,6 +8,7 @@ for (let index = 0; index < nombres.length; index++) {
 function sommeTableau(tableau) {
     let somme = 0;
     for (let index = 0; index < tableau.length; index++) {
+        somme +=tableau[index]
     }
     return somme;
 }
@@ -16,3 +17,8 @@ const tableau = [1, 2, 3, 4, 5];
 const resultat = sommeTableau(tableau);
 
 console.log(`La somme est ${resultat}`);
+
+// exercice 3
+function motPlusLong( tableauMots) {
+    
+}
