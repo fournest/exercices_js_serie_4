@@ -29,17 +29,18 @@ function motPlusLong(tableauMots) {
     if (!tableauMots || tableauMots.length === 0) {
         return null;
     }
-    let longueurMot = 0;
 
-    for (let index = 0; index < tableauMots.length; index++) {
-        console.log(tableauMots[index], tableauMots[index].length);
-        if (longueurMot < tableauMots[index]) {
-            let += mots
-        } else {
-
+    let compteur = 0;
+    let motPlusLong = "";
+    for (const mot of tableauMots) {
+        if (mot.length > compteur) {
+            compteur = mot.length;
+            motPlusLong = mot
         }
+
+
     }
-    return longueurMot;
+    return motPlusLong;
 }
 
 
@@ -63,7 +64,7 @@ console.log(inverserChaine("Bonjour"));
 console.log("EXERCICE 5");
 
 function compterVoyelles(chaine) {
-    const voyelles = `aeiouAEIOU`;
+    const voyelles = `aeiouyAEIOUY`;
     let nbrVoyelles = 0;
     for (let index = 0; index < chaine.length; index++) {
         if (voyelles.includes(chaine[index])) {
@@ -105,10 +106,7 @@ let nombreDeProprietes = 0;
 function compterProprietes(objet) {
 
     for (let key in objet) {
-        if (Object.prototype.hasOwnProperty.call(objet, key)) {
-            nombreDeProprietes++;
-
-        }
+        nombreDeProprietes++;
     }
     return nombreDeProprietes;
 }
@@ -137,14 +135,14 @@ console.log(extraireNoms(produits));
 console.log("EXERCICE 9");
 
 function factorielle(n) {
-    if (n === 0 || n === 1) {
-        return 1;
-    }
+    // if (n === 0 || n === 1) {
+    //     return 1;
+    // }
 
-    if (n < 0 || !Number.isInteger(n)) {
-        throw new Error("Veuillez entrer un nombre entier positif");
+    // if (n < 0 || !Number.isInteger(n)) {
+    //     throw new Error("Veuillez entrer un nombre entier positif");
 
-    }
+    // }
 
     let resultat = 1;
     for (let index = 2; index <= n; index++) {
@@ -154,7 +152,7 @@ function factorielle(n) {
     return resultat;
 }
 
-console.log(factorielle(20));
+console.log(factorielle(7));
 
 console.log("EXERCICE 10");
 
